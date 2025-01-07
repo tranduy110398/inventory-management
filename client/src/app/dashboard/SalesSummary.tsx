@@ -17,7 +17,6 @@ const SalesSummary = () => {
   const { data, isLoading, isError } = useGetDashboardMetricsQuery();
   const salesData = data?.salesSummary || [];
 
-
   const [timeframe, setTimeframe] = useState("weekly");
 
   const totalValueSum =

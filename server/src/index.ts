@@ -7,6 +7,7 @@ import helmet from "helmet";
 
 /* ROUTE IMPORTS */
 import dashboardRoutes from "./routes/dashboardRoutes";
+import productRoutes from "./routes/productRoutes";
 /* CONFIGURATIONS */
 dotenv.config();
 const app = express();
@@ -28,7 +29,7 @@ app.use(cors());
 /* ROUTES */
 
 app.use("/dashboard", dashboardRoutes); // http://localhost:3000/dashboard
-
+app.use("/products", productRoutes); // http://localhost:3000/products
 /* SERVER */
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

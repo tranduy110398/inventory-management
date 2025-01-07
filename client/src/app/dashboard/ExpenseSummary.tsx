@@ -17,7 +17,6 @@ const ExpenseSummary = () => {
   const { data, isLoading } = useGetDashboardMetricsQuery();
   const expenseByCategorySummary = data?.expenseByCategorySummary || [];
   const expenseSummary = data?.expenseSummary[0];
-  console.log("expenseSummary: ",expenseSummary);
   const expenseSums = expenseByCategorySummary.reduce(
     (acc: ExpenseSums, item: ExpenseByCategorySummary) => {
       const category = item.category + " Expenses";
